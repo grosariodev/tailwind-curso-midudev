@@ -5,17 +5,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>gabi.links - Enlaces de redes sociales</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 
-<body>
-    <header>
-        <h1>gabi.links</h1>
-        <p>Enlaces de redes sociales</p> 
+<body class="max-w-xl mx-auto
+border border-black
+min-h-screen
+bg-gradient-to-b from-black via-sky-900 to-gray-800
+
+">
+    <header class="text-white">
+        <img src="./assets/FotoGabEditada copia.psd" alt="gabi sonriendo">
+        
+        <section class="flex gap-3 justify-center">
+            <a class="bg-gradient-to-br from-purple-600 via-pink-500 to-orange-400 p-2 size-12 flex items-center justify-center rounded-full hover:scale-110 transition-transform"
+        href="https://www.instagram.com/gabrieeel.dev/" target="_blank" aria-label="instagram" title="Ir a instagram de @gabrieeel.dev">
+            <svg width="28" height="28">
+                <use xlink:href="./assets/sprite.svg#instagram"></use>
+            </svg>
+        </a>
+
+        <a class="bg-white p-2 size-12 flex items-center justify-center rounded-full hover:scale-110 transition-transform"
+        href="https://www.linkedin.com/in/gabrieldev/" target="_blank" aria-label="linkedin" title="Ir a linkedin de @gabrieldev">
+            <svg width="28" height="28">
+                <use xlink:href="./assets/sprite.svg#linkedin"></use>
+            </svg>
+        </a>
+
+        <a class="bg-gray-800 p-2 size-12 flex items-center justify-center rounded-full hover:scale-110 transition-transform"
+        href="https://github.com/grosariodev" target="_blank" aria-label="github" title="Ir a github de @grosariodev" >
+            <svg width="28" height="28">
+                <use xlink:href="./assets/sprite.svg#github"></use>
+            </svg>
+        </a>
+        </section>
+
     </header>
-    <main>
-         Aqui van los enlaces
-    </main>
-    <footer>Desarrollado por <a href="https://gabrieldev.com">gabrieldev</a> </footer>
 </body>
 
 </html>
