@@ -1,99 +1,85 @@
 <!DOCTYPE html>
-
 <html lang="en">
 
-
-
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>gabi.links - Enlaces de redes sociales</title>
-
+    
+    <meta name="theme-color" content="#000000">
+    
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-
-
+    
+    <style>
+        html.lenis, html.lenis body {
+          height: auto;
+        }
+        .lenis.lenis-smooth {
+          scroll-behavior: auto !important;
+        }
+        .lenis.lenis-smooth [data-lenis-prevent] {
+          overscroll-behavior: contain;
+        }
+        .lenis.lenis-stopped {
+          overflow: hidden;
+        }
+        .lenis.lenis-scrolling iframe {
+          pointer-events: none;
+        }
+    </style>
 </head>
 
+<body class="bg-black bg-[radial-gradient(ellipse_at_top,_rgba(29,78,216,0.3)_0%,transparent_80%)] bg-no-repeat min-h-screen antialiased">
 
+    <main class="max-w-xl mx-auto px-6">
+        <header class="text-white">
+            <img src="./assets/image.png" alt="gabi sonriendo"
+                class="h-100 object-cover block mx-auto mt-12 -mb-12 [mask-image:linear-gradient(to_bottom,black_60%,transparent)]">
 
-<body class="max-w-xl mx-auto min-h-screen bg-black bg-[radial-gradient(ellipse_at_top,_rgba(29,78,216,0.3)_0%,transparent_80%)] bg-no-repeat">
+            <div class="flex flex-col justify-center items-center">
+                <span class="text-xs font-mono px-3 py-1 border border-white/20 rounded-full text-gray-300 flex items-center bg-white/5 backdrop-blur-sm cursor-crosshair">
+                    @gabrieldev
+                    <svg class="ml-1.5 w-4 h-4 text-sky-400 inline" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.707a1 1 0 00-1.414-1.414L9 11.172l-1.293-1.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                    </svg>
+                </span>
 
-    <header class="text-white">
+                <h1 class="text-4xl md:text-6xl text-center font-semibold mt-5 bg-gradient-to-r from-white to-[#748298] text-transparent bg-clip-text pb-4">
+                    Gabriel Eduardo <br>Rosario Alvarado
+                </h1>
+            </div>
 
-        <img src="./assets/image.png" alt="gabi sonriendo"
-            class="h-100 object-cover block mx-auto mt-12 -mb-12 [mask-image:linear-gradient(to_bottom,black_20%,transparent_90%)]">
-
-        <header class="flex flex-col justify-center items-center">
-            <span
-                class="text-xs font-mono px-3 py-1 border border-white/20 rounded-full text-gray-300 flex items-center bg-white/5 backdrop-blur-sm cursor-crosshair">
-                @gabrieldev
-                <svg class="ml-1.5 w-4 h-4 text-sky-400 inline" fill="currentColor" viewBox="0 0 20 20">
-                    <path fill-rule="evenodd"
-                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.707a1 1 0 00-1.414-1.414L9 11.172l-1.293-1.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                        clip-rule="evenodd" />
-                </svg>
-            </span>
-
-
-
-            <h1
-                class="text-4xl md:text-6xl text-center font-semibold max-w-4xl mt-5 bg-gradient-to-r from-white to-[#748298] text-transparent bg-clip-text pb-4">
-                Gabriel Eduardo <br>Rosario Alvarado</h1>
+            <section class="flex gap-3 justify-center mb-12">
+                <a class="bg-gradient-to-br from-purple-600 via-pink-500 to-orange-400 p-2 size-12 flex items-center justify-center rounded-full hover:scale-110 transition-transform" href="#">
+                    <svg width="28" height="28"><use xlink:href="./assets/sprite.svg#instagram"></use></svg>
+                </a>
+                <a class="bg-white p-2 size-12 flex items-center justify-center rounded-full hover:scale-110 transition-transform" href="#">
+                    <svg width="28" height="28"><use xlink:href="./assets/sprite.svg#linkedin"></use></svg>
+                </a>
+                <a class="bg-gray-800 p-2 size-12 flex items-center justify-center rounded-full hover:scale-110 transition-transform" href="#">
+                    <svg width="28" height="28"><use xlink:href="./assets/sprite.svg#github"></use></svg>
+                </a>
+            </section>
         </header>
 
-        <section class="flex gap-3 justify-center">
+        <div class="h-[100vh]"></div>
+    </main>
 
-            <a class="bg-gradient-to-br from-purple-600 via-pink-500 to-orange-400 p-2 size-12 flex items-center justify-center rounded-full hover:scale-110 transition-transform"
-                href="https://www.instagram.com/gabrieeel.dev/" target="_blank" aria-label="instagram"
-                title="Ir a instagram de @gabrieeel.dev">
+    <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
+    <script>
+        const lenis = new Lenis({
+            duration: 1.2, // Qué tan lento/suave es el scroll
+            easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // La curva de suavizado tipo Framer
+            smoothWheel: true,
+            touchMultiplier: 1.5, // Hace que en el iPhone se sienta más responsivo
+        })
 
-                <svg width="28" height="28">
+        function raf(time) {
+            lenis.raf(time)
+            requestAnimationFrame(raf)
+        }
 
-                    <use xlink:href="./assets/sprite.svg#instagram"></use>
-
-                </svg>
-
-            </a>
-
-
-
-            <a class="bg-white p-2 size-12 flex items-center justify-center rounded-full hover:scale-110 transition-transform"
-                href="https://www.linkedin.com/in/gabrieldev/" target="_blank" aria-label="linkedin"
-                title="Ir a linkedin de @gabrieldev">
-
-                <svg width="28" height="28">
-
-                    <use xlink:href="./assets/sprite.svg#linkedin"></use>
-
-                </svg>
-
-            </a>
-
-
-
-            <a class="bg-gray-800 p-2 size-12 flex items-center justify-center rounded-full hover:scale-110 transition-transform"
-                href="https://github.com/grosariodev" target="_blank" aria-label="github"
-                title="Ir a github de @grosariodev">
-
-                <svg width="28" height="28">
-
-                    <use xlink:href="./assets/sprite.svg#github"></use>
-
-                </svg>
-
-            </a>
-
-        </section>
-
-
-
-    </header>
-
+        requestAnimationFrame(raf)
+    </script>
 </body>
-
-
-
 </html>
